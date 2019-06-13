@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <title>{{ title }}</title>
+
+    <!-- Meta charset -->
+    <meta charset="utf8">
+
+    <!-- Title -->
+    <title>EGrillNET - Die Plattform für EGrills</title>
+
+    <!-- Stylesheet -->
     <link rel='stylesheet' href='/stylesheets/style.css' />
 
     <!-- Viewport -->
@@ -19,8 +26,41 @@
     <meta property="og:url" content="https://www.egrill.net">
     <meta property="og:image" content="https://www.egrill.net/images/logo.png">
 
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+          href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        window.cookieconsent.initialise({
+          "palette": {
+            "popup": {
+              "background": "#edeff5",
+              "text": "#838391"
+            },
+            "button": {
+              "background": "#4b81e8"
+            }
+          },
+          "theme": "edgeless",
+          "position": "bottom-right",
+          "content": {
+            "message": "Diese Webseite benutzt Cookies um die Benutzererfahrung zu verbessern.",
+            "dismiss": "Verstanden",
+            "link": "Mehr erfahren",
+            "href": "https://www.egrill.net/legal/privacy"
+          }
+        })
+      });
+    </script>
+
   </head>
   <body>
+
+    {% include 'components/header.twig' %}
+
     {% block body %}{% endblock %}
+
+    {% include 'components/footer.twig' %}
   </body>
 </html>
