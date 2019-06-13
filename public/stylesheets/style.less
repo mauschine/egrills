@@ -1,8 +1,105 @@
+// Import variables
+@import url('vars');
+// Import google fonts
+@import url('https://fonts.googleapis.com/css?family=Charm|Roboto');
+// Import bootstrap grid
+@import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap-grid.min.css');
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  font-family: @font-roboto;
+
+  a {
+    text-decoration: none;
+    color: @color-gray;
+  }
+
+  .emote {
+    max-height: 20px;
+  }
 }
 
-a {
-  color: #00B7FF;
+header {
+
+  background-color: @color-smoke;
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+
+    .navbar-brand {
+
+      display: flex;
+    }
+
+    .navbar-nav {
+
+      margin-left: auto;
+      display: flex;
+
+      ul {
+        list-style: none;
+
+        li {
+
+          font-size: 1.4rem;
+          cursor: pointer;
+
+          &:hover {
+
+            background-color: @color-smoke;
+            transition: 0.4s;
+          }
+
+          display: inline-block;
+
+          a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            padding: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+
+  padding: 60px 0;
+  background-color: @color-mystery-dark;
+  color: @color-smoke;
+
+  .footer-widgets {
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: block;
+
+        a {
+          color: white;
+        }
+      }
+    }
+
+    p {
+      text-align: justify;
+    }
+  }
+
+  .footer-copyright {
+    margin: 60px 0 0;
+    text-align: center;
+  }
+}
+
+section {
+  padding: 60px 0;
 }
