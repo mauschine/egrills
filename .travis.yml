@@ -1,0 +1,25 @@
+################
+### Language ###
+################
+language: node
+
+################
+### Services ###
+################
+services:
+  - docker
+
+#####################
+### Notifications ###
+#####################
+notifications:
+  email: false
+
+##################
+### Deployment ###
+##################
+deploy:
+  provider: script
+  script: bash scripts/deploy.sh
+  on:
+    branch: master
