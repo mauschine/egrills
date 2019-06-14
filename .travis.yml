@@ -15,6 +15,9 @@ services:
 notifications:
   email: false
 
+script:
+  - npm install
+
 ##################
 ### Deployment ###
 ##################
